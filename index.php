@@ -4,9 +4,9 @@
 ?>
 <main class="page-accueil">
     <article class="amorce">
-        <h1>Teeshirts, hoodies, et casquettes fabriqués au Québec 💯</h1>
-        <h2>Conçus au TIM avec ❤️</h2>
-        <h4>/** avec un p'tit peu d'aide de DALL-E 😉 **/</h4>
+        <h1></h1>
+        <h2></h2>
+        <h4>/</h4>
     </article>
     <article class="principal">
         <p>
