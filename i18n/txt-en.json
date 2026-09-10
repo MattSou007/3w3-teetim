@@ -1,0 +1,39 @@
+{
+    "header" : 
+    {
+        "meta" : 
+        {
+            "title" : "teeTIM // natural fiber ... artificial design",
+            "desc" : "Homepage of the clothing designer 100% made in Quebec, designed by TIM students using designs created by artificial intelligence, and made with 100% natural and organic fibers."
+        },
+        "searchPlacholder" : "Search",
+        "logoAlt" : "Home",
+        "navMain" :
+        {
+            "navTeeshirts" : "T-Shirts",
+            "navCap" : "Caps",
+            "navHoodies" : "Hoodies",
+            "navHelp" : "Help",
+            "navUs" : "About Us"
+        }
+    },
+    "footer" : {},
+    "home" : 
+    {
+        "leadH1" : "T-Shirts, hoodies, and caps made in Quebec 💯",
+        "leadH2" : "Designed at TIM with ❤️",
+        "leadH4" : "/** with a little help from DALL-E 😉 **/",
+        "para1" : "Today, the T-shirt is an essential piece of clothing in everyone's wardrobe. And at a time when environmental issues are more important than ever, we prefer T-shirts made in Quebec to reduce environmental impact and promote local craftsmanship.",
+        "para2" : "V-neck, crew neck, loose or fitted, short-sleeved or long-sleeved for those who get chilly, plain or patterned to add style to an outfit... The T-shirt is available in a variety of colors, styles, and patterns."
+    },
+    "teeshirts" : 
+    {
+        "leadH1" : "Our T-Shirts",
+        "WiP" : "Coming soon..."
+    },
+    "caps" : 
+    {
+        "leadH1" : "Our Caps",
+        "WiP" : "Coming soon..."
+    }
+}

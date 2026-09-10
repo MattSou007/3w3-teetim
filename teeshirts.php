@@ -1,13 +1,18 @@
 <?php
+    // Indiquer la page
+    $page = "teeshirts";
+
     // Inclure le fichier commun contenant le haut du code des écrans de UI
     include_once("commun/header.inc.php");
+
+    /** @var stdClass $_ */
 ?>
 <main class="page-teeshirts">
     <article class="amorce">
-        <h1>Nos teeshirts</h1>
+        <h1><?= $_->leadH1; ?></h1>
     </article>
     <article class="principal">
-        À venir...
+        <?= $_->WiP; ?>
     </article>
 </main>
 <?php
