@@ -4,9 +4,15 @@
     // 1) choix de langue ( par défaut: Français)
     $language = 'fr';
     // 2) si utilisateur a fait un choix par le passé (témoins HTTP/cookies), alors changer la var au code langue sauvergadé
-
+    if(isset($_COOKIE["chosenLan"])) {$language = $_COOKIE["chosenLan"];}
     // 3) si utilisateur clique le bouton de langue, changer la var au langue correspondant
-    if(isset($_GET["lan"])) { $language = $_GET["lan"]; }
+    if(isset($_GET["lan"])) 
+        { 
+            $language = $_GET["lan"];
+
+            // Mémoriser ce choix dans un témoin HTTP (cookie)
+            setcookie("chosenLan", $language, time()+7*24*60*60);
+        }
 
     // A) lire le fichier JSON contenant les textes
     $txtJSON = file_get_contents('i18n/txt-'.$language.'.json');
@@ -52,8 +58,8 @@
     <div class="conteneur">
         <header>
             <nav class="barre-haut">
-                <a class="" href="index.php?lan=fr">fr</a>
-                <a class="" href="index.php?lan=en">en</a>
+                <a class="" href="?lan=fr">fr</a>
+                <a class="" href="?lan=en">en</a>
             </nav>
             <nav class="barre-logo">
                 <label for="cc-btn-responsive" class="material-icons burger">menu</label>
