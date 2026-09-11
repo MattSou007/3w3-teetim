@@ -17,7 +17,31 @@
             "navUs" : "About Us"
         }
     },
-    "footer" : {},
+    "footer" :
+    {
+        "purchase" :
+        {
+            "title" : "Your purchases",
+            "navFaq" : "Frequently asked questions",
+            "navDelivery" : "Package delivery",
+            "navCondtions" : "Terms of sale",
+            "navConfid" : "Privacy policy"
+        },
+        "aboutUs" :
+        {
+            "title" : "About teeTIM",
+            "navCompany" : "The company",
+            "navTeam" : "The team",
+            "navJob" : "Jobs"
+        },
+        "contact" :
+        {
+            "title" : "Contact us",
+            "tel" : "Toll-free: ",
+            "email" : "Email: aide@teetim.ca"
+        },
+        "rights" : "All rights reserved, "
+    },
     "home" : 
     {
         "leadH1" : "T-Shirts, hoodies, and caps made in Quebec 💯",

@@ -17,7 +17,31 @@
             "navUs" : "À propos de nous"
         }
     },
-    "footer" : {},
+    "footer" : 
+    {
+        "purchase" :
+        {
+            "title" : "Vos achats",
+            "navFaq" : "Foire aux questions",
+            "navDelivery" : "Livraison de votre colis",
+            "navCondtions" : "Conditions de vente",
+            "navConfid" : "Politique de confidentialité"
+        },
+        "aboutUs" :
+        {
+            "title" : "À propos de teeTIM",
+            "navCompany" : "La compagnie",
+            "navTeam" : "L'équipe",
+            "navJob" : "Emplois"
+        },
+        "contact" :
+        {
+            "title" : "Nous joindre",
+            "tel" : "Sans frais : ",
+            "email" : "Courriel : aide@teetim.ca"
+        },
+        "rights" : "Tous droits réservés, "
+    },
     "home" : 
     {
         "leadH1" : "Teeshirts, hoodies, et casquettes fabriqués au Québec 💯",

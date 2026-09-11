@@ -6,6 +6,7 @@
     include_once("commun/header.inc.php");
 
     /** @var stdClass $_ */
+    // ^^^ commentaire de documentations (annotation)
 ?>
 <main class="page-accueil">
     <article class="amorce">

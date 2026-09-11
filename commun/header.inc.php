@@ -58,8 +58,8 @@
     <div class="conteneur">
         <header>
             <nav class="barre-haut">
-                <a class="" href="?lan=fr">fr</a>
-                <a class="" href="?lan=en">en</a>
+                <a class="<?php echo $language==='fr'? 'actif' : ''; ?>" href="?lan=fr">fr</a>
+                <a class="<?php echo $language==='en'? 'actif' : ''; ?>" href="?lan=en">en</a>
             </nav>
             <nav class="barre-logo">
                 <label for="cc-btn-responsive" class="material-icons burger">menu</label>
