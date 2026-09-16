@@ -1,12 +1,24 @@
 <?php
+    // Déterminer **dynamiquement** quels sont les langues dispo sur le site
+    $lanDispo = []; // en js : let lanDispo [];
+    $contentI18n = scandir("i18n");
+    for ($i=0; $i < count($contentI18n); $i++)
+        {
+            // pour chauqe fichier json, garder la partie avant l'extension & ajouter au tablea $lanDispo
+            if($contentI18n[$i] !== '.' && $contentI18n[$i] !== '..')
+                {
+                    $lanDispo[] = substr($contentI18n[$i], 0, 2);
+                }
+        }
+
     // afficher les paramètres d'URL (querystring)
 
     // 1) choix de langue ( par défaut: Français)
     $language = 'fr';
     // 2) si utilisateur a fait un choix par le passé (témoins HTTP/cookies), alors changer la var au code langue sauvergadé
-    if(isset($_COOKIE["chosenLan"])) {$language = $_COOKIE["chosenLan"];}
+    if(isset($_COOKIE["chosenLan"] ) && in_array($_GET["lan"], $lanDispo)) {$language = $_COOKIE["chosenLan"];}
     // 3) si utilisateur clique le bouton de langue, changer la var au langue correspondant
-    if(isset($_GET["lan"])) 
+    if(isset($_GET["lan"]) && in_array($_GET["lan"], $lanDispo)) 
         { 
             $language = $_GET["lan"];
 
@@ -15,7 +27,7 @@
         }
 
     // A) lire le fichier JSON contenant les textes
-    $txtJSON = file_get_contents('i18n/txt-'.$language.'.json');
+    $txtJSON = file_get_contents('i18n/'.$language.'.json');
     // test wowie
     // echo $txtJSON;
 
@@ -58,8 +70,10 @@
     <div class="conteneur">
         <header>
             <nav class="barre-haut">
-                <a class="<?php echo $language==='fr'? 'actif' : ''; ?>" href="?lan=fr">fr</a>
-                <a class="<?php echo $language==='en'? 'actif' : ''; ?>" href="?lan=en">en</a>
+                <!-- Gabarit des liens (balise A) qu repr/sentent les boutons de langue -->
+                <?php for($i=0; $i < count($lanDispo); $i++) { ?>
+                    <a class="<?= $language===$lanDispo[$i]? 'actif' : '' ?>" href="?lan=<?= $lanDispo[$i]; ?>"><?= $lanDispo[$i]; ?></a>
+                <?php } ?>
             </nav>
             <nav class="barre-logo">
                 <label for="cc-btn-responsive" class="material-icons burger">menu</label>
@@ -70,7 +84,7 @@
             <input type="checkbox" id="cc-btn-responsive">
             <nav class="principale">
                 <label for="cc-btn-responsive" class="menu-controle material-icons">close</label>
-                <a href="teeshirts.php"><?= $_head->navMain->navTeeshirts; ?></a>
+                <a href="teeshirts.php" class="<?= $page==='teeshirts'? 'actif' : '' ?>"><?= $_head->navMain->navTeeshirts; ?></a>
                 <a href="casquettes.php"><?= $_head->navMain->navCap; ?></a>
                 <a href="hoodies.php"><?= $_head->navMain->navHoodies; ?></a>
                 <span class="separateur"></span>
